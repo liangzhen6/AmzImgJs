@@ -1,0 +1,17 @@
+{
+    "name": "get amz image",
+    "description" : "get a web page image",
+    "version": "1.0",
+    "manifest_version": 2,
+	"content_scripts": [
+	{
+		"matches": ["*://*.amazon.com/*"],
+		"js": ["contentScript.js"],
+		"run_at": "document_end"
+	}
+	],
+    "browser_action": {
+      "default_popup": "amz.html",
+      "default_icon": "amz.png"
+    }
+  }
